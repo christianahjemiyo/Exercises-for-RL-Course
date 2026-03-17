@@ -2,7 +2,7 @@
 import random
 from collections import Counter
 
-st.set_page_config(page_title="RL Algorithm Mastery Dashboard", layout="wide")
+st.set_page_config(page_title="RL Course Practice Dashboard", layout="wide")
 
 QUESTIONS = [
   {
@@ -3686,7 +3686,8 @@ def reset_quiz():
 initialize_state()
 
 with st.sidebar:
-    st.title("RL Dashboard")
+    st.title("RL Course Practice")
+    st.write("Use this app for quiz practice and review while learning the course material.")
     st.write("**Question bank:** 300 true unique questions")
     st.write("**Batch size:** 50 shuffled questions per quiz")
     counts = algorithm_counts(QUESTIONS)
@@ -3697,8 +3698,8 @@ with st.sidebar:
         reset_quiz()
         st.rerun()
 
-st.title("Reinforcement Learning Algorithm Mastery Dashboard")
-st.write("Use this to learn **how the algorithms differ, when to use each one, and what situations they fit best**.")
+st.title("Reinforcement Learning Course Practice Dashboard")
+st.write("Use this for **practice, review, and repetition** so the major RL algorithms become easier to recognize and compare.")
 
 tab1, tab2, tab3 = st.tabs(["Quiz", "Study Guide", "Missed Questions"])
 
@@ -3857,5 +3858,5 @@ with tab3:
             st.caption(f"Algorithm focus: {q['answer']}")
             st.write("")
 
-st.caption("Built for repeated practice: new quiz batches are shuffled every time.")
+st.caption("Built for course practice: each quiz uses a newly shuffled batch of questions.")
 
